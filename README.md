@@ -25,7 +25,6 @@ This repository contains the WordPress plugin source code.
 
 ## Privacy & performance
 
-- No cookies are set by the plugin
 - No user tracking
 - Minimal performance overhead
 - No content modification
