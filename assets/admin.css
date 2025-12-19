@@ -1,0 +1,1142 @@
+body.toplevel_page_ipintel-dashboard,
+body.ipintel-ai_page_ipintel-settings {
+    background: #06090d !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+
+.ipintel-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    color: #d6f5ff;
+}
+
+.ipintel-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #e9fbff;
+}
+
+.ipintel-card {
+    background: radial-gradient(circle at top left, #101a26, #050910);
+    border-radius: 16px;
+    border: 1px solid #0ff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    padding: 22px 24px;
+    margin-bottom: 24px;
+}
+
+.ipintel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid #12d4ff;
+    background: linear-gradient(135deg, #11b7e6, #12f0ff);
+    color: #021017;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.ipintel-btn:hover {
+    background: #0cf5ff;
+    color: #000;
+}
+
+.ipintel-btn-secondary {
+    background: transparent;
+    color: #8ee3ff;
+    border-color: #255e74;
+}
+
+.ipintel-btn-secondary:hover {
+    background: rgba(18, 244, 255, 0.08);
+}
+
+.ipintel-output {
+    background: #050910;
+    color: #aefbcd;
+    border: 1px solid #174a3b;
+    padding: 14px 16px;
+    border-radius: 8px;
+    overflow: auto;
+    max-height: 400px;
+    font-size: 12px;
+}
+
+
+/* FULL DARK BACKGROUND */
+.ipintel-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+
+/* Container width */
+.ipintel-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+/* HEADER */
+.ipintel-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 26px;
+}
+
+.ipintel-header-logo {
+    width: 42px;
+    height: 42px;
+
+}
+
+.ipintel-header h1 {
+    font-size: 24px;
+    color: #e9faff;
+    margin: 0;
+    padding: 9px 0;
+}
+
+
+.description
+{
+font-weight:normal;
+font-size:12px;
+}
+
+
+.version
+{
+ display: inline-block;
+padding: 2px 9px;
+font-size: 12px;
+    font-weight: 600;
+    color: #0ff;
+    background: linear-gradient(145deg, #0a0f14, #0d1e26);
+    border: 1px solid rgba(0,255,255,0.35);
+    border-radius: 20px;
+    box-shadow: 
+        0 0 6px rgba(0,255,255,0.25),
+        inset 0 0 8px rgba(0,255,255,0.18);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+    
+ 
+}
+
+
+.version:hover {
+    box-shadow: 
+        0 0 12px rgba(0,255,255,0.65),
+        inset 0 0 12px rgba(0,255,255,0.35);
+    border-color: rgba(0,255,255,0.7);
+    color: #bff;
+    cursor: default;
+}
+/* GRID OF CARDS (cards next to each other) */
+.ipintel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 5px;
+}
+
+
+/* Normal card */
+.ipintel-card {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 40, 70, 0.8) 0%,
+        rgba(0, 20, 40, 0.85) 35%,
+        rgba(0, 10, 25, 0.9) 100%
+    );
+    border: 1px solid rgba(0, 180, 255, 0.25);
+    border-radius: 18px;
+    padding: 32px 34px;
+    box-shadow: 0 0 7px rgba(0, 200, 255, 0.15);
+    margin-bottom: 28px;
+    color: #bdeaff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Full-width card (only for splash) */
+.ipintel-card-full {
+    background: linear-gradient(
+        140deg,
+        rgba(0, 55, 95, 0.7),
+        rgba(0, 35, 60, 0.85),
+        rgba(0, 20, 40, 0.9)
+    );
+    border: 1px solid rgba(0, 160, 255, 0.2);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 26px;
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.08);
+    color: #d4f0ff;
+}
+
+/* Card titles */
+h3,
+ h2, label {
+    margin-top: 0;
+    color: #ebfbff;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* ----------------------------------------------- */
+/* RESPONSIVE FIX FOR DASHBOARD CARDS             */
+/* ----------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .ipintel-grid,
+    .ipintel-wide-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+
+    .ipintel-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        flex: 0 0 100% !important;
+        margin-right: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+
+    .ipintel-map-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #ipintel-map {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .ipintel-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-right: 0 !important;
+        padding-right: 20px !important;
+        padding-left: 10px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
+    .ipintel-grid,
+    .ipintel-wide-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .ipintel-card,
+    .ipintel-map-card,
+    .ipintel-video-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
+    html.wp-toolbar,
+    body.wp-admin {
+        overflow-x: hidden !important;
+    }
+}
+
+/* Lighter text */
+.ipintel-card p,
+.ipintel-card-full p {
+    color: #b7e9ff;
+    margin-bottom: 6px;
+}
+
+/* Buttons */
+.ipintel-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.ipintel-btn {
+    background: #00c8ff;
+    color: #002f44 !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ipintel-btn-secondary {
+    background: #004966;
+    color: #b4eaff !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.button-primary
+{
+font-size:14px !important;
+padding:5px 15px !important;
+border-radius:8px !important;
+}
+
+/* PLAN */
+.ipintel-plan {
+    
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    
+}
+
+.ipintel-plan-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #eaffff;
+    text-shadow: 0 0 10px rgba(0,255,255,0.6);
+    margin: 0 15px;
+}
+
+.ipintel-upgrade-btn {
+    background: #00d1ff;
+    color: #002a3a !important;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(0,210,255,0.5);
+}
+
+/* CIRCLES CONTAINER */
+.ipintel-usage-circles {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 18px 0 8px 0;
+}
+
+/* BIG CIRCLE */
+.ipintel-circle-big {
+    --size: 140px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: conic-gradient(var(--clr) calc(var(--pct) * 1%), #07202f 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 14px rgba(0,255,255,0.25);
+}
+
+.ipintel-circle-inner {
+    background: #04131f;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* UNIVERSAL GLOW FOR CIRCLES */
+.ipintel-circle-big,
+.ipintel-circle-small {
+    box-shadow: var(--glow) var(--clr);
+    transition: box-shadow 0.35s ease, background 0.3s ease;
+}
+
+/* Pulse animation for high usage */
+@keyframes ipintel-pulse {
+    0%   { box-shadow: var(--glow) var(--clr); transform: scale(1); }
+    50%  { box-shadow: 0 0 35px var(--clr); transform: scale(1.03); }
+    100% { box-shadow: var(--glow) var(--clr); transform: scale(1); }
+}
+
+.ipintel-circle-big[data-high="1"],
+.ipintel-circle-small[data-high="1"] {
+    animation: ipintel-pulse 1.8s ease-in-out infinite;
+}
+
+.ipintel-circle-value {
+    color: #d5f7ff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ipintel-circle-label {
+    color: #8ec9e4;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* SMALL CIRCLE */
+.ipintel-circle-small {
+    --size: 90px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: conic-gradient(var(--clr) calc(var(--pct) * 1%), #07202f 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipintel-circle-inner-small {
+    background: #04131f;
+    width: 78%;
+    height: 78%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipintel-circle-value-small {
+    color: #d5f7ff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ipintel-circle-label-small {
+    color: #8ec9e4;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* Latency */
+.ipintel-latency {
+      text-align: right;      
+
+    margin-top: 0px;
+    color: #9fdfff;
+    font-size: 13px;
+}
+
+/* Desktop layout: 2 columns (map wide + video narrow) */
+.ipintel-wide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* Keep cards equal height on desktop */
+/* map spans 2 columns */
+.ipintel-map-card {
+    grid-column: span 2;
+}
+
+/* video spans 1 column */
+.ipintel-video-card {
+    grid-column: span 1;
+}
+
+.ipintel-video-card,
+.ipintel-map-card {
+    padding: 28px 32px; /* едни и същи стойности */
+}
+
+
+/* Video wrapper */
+.ipintel-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.ipintel-video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ---------------------------------------------- */
+/* RESPONSIVE FIX — MOBILE / SMALL TABLETS         */
+/* ---------------------------------------------- */
+@media (max-width: 900px) {
+    .ipintel-wide-grid {
+        grid-template-columns: 1fr;   /* <-- STACKED vertically */
+    }
+
+    .ipintel-map-card,
+    .ipintel-video-card {
+        height: auto;
+    }
+
+    #ipintel-map {
+        height: 320px !important;  /* Smaller height on mobile */
+    }
+}
+
+/* settings theme */ 
+
+ipintel-ai_page_ipintel-settings
+ {
+    background: #06090d !important;
+}
+
+ipintel-ai_page_ipintel-settings .wrap {
+    color: #d6f5ff;
+}
+
+ipintel-ai_page_ipintel-settings table.form-table th,
+ipintel-ai_page_ipintel-settings table.form-table td {
+    color: #d6f5ff;
+}
+
+ipintel-ai_page_ipintel-settings input,
+ipintel-ai_page_ipintel-settings textarea,
+ipintel-ai_page_ipintel-settings select {
+    background: #0d141b;
+    border: 1px solid #1e3a4d;
+    color: #bfeaff;
+}
+
+
+.ipintel-alert {
+    position: relative;
+    background: rgba(0, 200, 255, 0.08);
+    border: 1px solid #00c8ff;
+    padding: 14px 20px;
+    margin-bottom: 26px;
+    border-radius: 12px;
+    color: #d6faff;
+    font-weight: 600;
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.3);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.3s ease;
+}
+
+.ipintel-alert .msg {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.ipintel-alert .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #8feaff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.ipintel-alert .close-btn:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #00eaff;
+    float:right;
+}
+
+
+
+/* KILL SWITCH CARD */
+.ipintel-killcard {
+    background: linear-gradient(135deg, rgba(0,50,80,0.7), rgba(0,20,40,0.85));
+    border: 1px solid rgba(0,200,255,0.25);
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    border-radius: 18px;
+    box-shadow: 0 0 12px rgba(0,200,255,0.15);
+}
+
+/* Container */
+.ipintel-kill-container {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 10px;
+}
+
+/* LED indicator */
+.ipintel-status-led {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0,255,255,0.6);
+}
+
+.ipintel-status-led.led-on {
+    background: #00eaff;
+    box-shadow: 0 0 18px #00eaff;
+}
+
+.ipintel-status-led.led-off {
+    background: #ff0033;
+    box-shadow: 0 0 18px #ff0033;
+}
+
+/* Label */
+.ipintel-status-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #c9f7ff;
+    letter-spacing: 0.5px;
+}
+
+/* Toggle button */
+.ipintel-kill-btn {
+    padding: 8px 22px;
+    border-radius: 8px;
+    border: 1px solid #00c8ff;
+    background: rgba(0, 30, 40, 0.8);
+    color: #a7f2ff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.ipintel-kill-btn:hover {
+    background: #00c8ff;
+    color: #002430;
+    box-shadow: 0 0 15px #00c8ff;
+}
+
+/* Whitelist link */
+.ipintel-whitelist-line, .ipintel-requests-line {
+    margin-top: 18px;
+    font-size: 15px;
+    color: #9adfff;
+}
+
+.ipintel-whitelist-line a {
+    color: #00eaff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ipintel-whitelist-line a:hover {
+    text-shadow: 0 0 8px #00eaff;
+}
+/* blacklist link */
+.ipintel-blacklist-line {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #9adfff;
+}
+
+.ipintel-blacklist-line a {
+    color: #00eaff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ipintel-blacklist-line a:hover {
+    text-shadow: 0 0 8px #00eaff;
+}
+
+.ipintel-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.ipintel-tab-btn {
+    padding: 8px 16px;
+    background: #0e1622;
+    border: 1px solid #1e3040;
+    color: #78e8ff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.ipintel-tab-btn.active {
+    background: #00eaff22;
+    border-color: #00eaff;
+    color: #00eaff;
+    box-shadow: 0 0 12px #00eaff66;
+}
+
+.ipintel-tab-pane { display:none; }
+.ipintel-tab-pane.active { display:block; }
+
+/* Wrapper to force scroll and prevent huge card height */
+/* Wrapper inside the card */
+.ipintel-log-wrap {
+    max-height: 380px; /* колкото е картата */
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+/* Table appearance */
+.ipintel-log-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.ipintel-log-table thead th {
+    position: sticky;
+    top: 0;
+    background: rgba(0,20,40,0.75);
+    backdrop-filter: blur(4px);
+    color: #9fe8ff;
+    font-size: 12px;
+    padding: 6px 10px;
+    z-index: 5;
+}
+
+.ipintel-log-table tbody td {
+    padding: 6px 10px;
+    font-size: 12px;
+    color: #d9f6ff;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Alternating rows */
+.ipintel-log-table tbody tr:nth-child(even) td {
+    background: rgba(255,255,255,0.01);
+}
+.ipintel-log-table tbody tr:nth-child(odd) td {
+    background: transparent;
+}
+
+/* Ellipsis for long fields */
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* IP column mini link icon */
+.ipcell {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.ipcell .ip-ext {
+    color: #26e0ff;
+    opacity: 0.8;
+    text-decoration:none;
+}
+.ipcell .ip-ext:hover {
+    opacity: 1;
+}
+
+/* Decision badges */
+.badge {
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-block {
+    background: rgba(255,0,0,0.15);
+    color: #ff6a6a;
+    border: 1px solid rgba(255,0,0,0.3);
+}
+
+.badge-challenge {
+    background: rgba(255,174,0,0.15);
+    color: #ffbf66;
+    border: 1px solid rgba(255,165,0,0.3);
+}
+
+.badge-allow {
+    background: rgba(0,200,255,0.15);
+    color: #6ef9ff;
+    border: 1px solid rgba(0,200,255,0.3);
+}
+.badge-whitelisted {
+    background: #009d32;
+    color: #fff;
+    padding: 3px 8px;
+
+    font-weight: 600;
+}
+
+.badge-blacklisted {
+    background: rgba(255,0,0,0.15);
+    color: #ff6a6a;
+    border: 1px solid rgba(255,0,0,0.3);
+}
+
+ .badge-challenge-pass {
+      background: rgba(0,200,255,0.15);
+    color: #6ef9ff;
+    border: 1px solid rgba(0,200,255,0.3);
+}
+
+.badge-whitelisted {
+    background: rgba(0,200,255,0.15);
+    color: #6ef9ff;
+    border: 1px solid rgba(0,200,255,0.3);
+
+}
+
+/* Cache icons */
+.cachecell {
+    text-align: center;
+}
+
+.cache-hit,
+.cache-miss {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.cache-hit {
+    background: #5eff9f; /* green flash */
+
+}
+
+.cache-miss {
+    background: #f35;
+    
+}
+
+
+/* SCROLLBAR — Cyber Dark Neon */
+.ipintel-log-wrap::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ipintel-log-wrap::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.ipintel-log-wrap::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0ef, #0af);
+    border-radius: 10px;
+    box-shadow: 0 0 6px #0ef;
+}
+
+.ipintel-log-wrap::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #1affff, #00bfff);
+}
+
+/* Firefox */
+.ipintel-log-wrap {
+    scrollbar-width: thin;
+    scrollbar-color: #0ef rgba(0,0,0,0.2);
+}
+
+
+/* BADGE LIST WRAPPER */
+.ov-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.ov-divider
+{
+	margin:20px 0; border-top:1px solid #003545 !important;border-bottom:1px solid #000;
+}
+
+/* BADGE ITEM — COMPACT CYBER STYLE */
+.badge-item {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.12);
+    padding: 4px 7px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #cfefff;
+    line-height: 1;
+    white-space: nowrap;
+    height: 22px;
+    box-shadow: 0 0 4px rgba(0,255,255,0.12);
+    transition: 120ms;
+}
+
+.badge-item:hover {
+    border-color: rgba(0,255,255,0.35);
+    box-shadow: 0 0 9px rgba(0,255,255,0.28);
+}
+
+/* EMOJI — SMALLER */
+.badge-emoji {
+    font-size: 13.5px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* LABEL — SHORTER AND TIGHT */
+.badge-label {
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* COUNT — SMALL AND MINIMAL */
+.badge-count {
+    background: #00e5ff22;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 10.5px;
+    color: #00e5ff;
+    line-height: 1;
+}
+
+
+.ov-line {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.ov-num {
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+/* Colors only for the numbers */
+.ov-chal { color: #ffcc66; }   /* amber */
+.ov-blk  { color: #ff6666; }   /* red */
+.ov-pass { color: #66ffb3; }   /* green */
+
+
+.ipintel-theme-group {
+    margin-top: 25px;
+}
+
+.ipintel-theme-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.ipintel-theme-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.ipintel-theme-card {
+    position: relative;
+    cursor: pointer;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.25s ease;
+    background: #020b16;
+}
+
+.ipintel-theme-card img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.ipintel-theme-card span {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    color: #9ee7ff;
+
+}
+
+.ipintel-theme-card input {
+    display: none;
+}
+
+.ipintel-theme-card:has(input:checked) {
+    border-color: #00e5ff;
+    box-shadow: 0 0 18px rgba(0,229,255,0.45);
+    transform: translateY(-2px);
+}
+
+.ipintel-theme-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(0,229,255,0.25);
+}
+
+
+
+
+
+/* ===============================
+   IPIntel.ai – Footer Badge Selector
+   =============================== */
+
+.ipintel-badge-choices{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  align-items:stretch;
+
+}
+
+/* ---------- choice wrapper ---------- */
+
+.ipintel-badge-choice{
+  position:relative;
+  display:block;
+  cursor:pointer;
+}
+
+.ipintel-badge-choice input{
+  display:none;
+}
+
+/* ---------- base card ---------- */
+
+.ipintel-badge-card{
+  position:relative;
+  min-width:190px;
+  border-radius:14px;
+  padding:14px 14px 2px 14px;
+  font-family:'Share Tech Mono', monospace;
+  transition:
+    box-shadow .25s ease,
+    transform .18s ease,
+    border-color .25s ease,
+    outline-color .25s ease;
+}
+
+/* ---------- OFF ---------- */
+
+.ipintel-badge-card.off{
+  background:linear-gradient(145deg,#0a0d12,#070a0f);
+  color:#7c8a99;
+  border:1px dashed rgba(120,150,170,0.25);
+  box-shadow:none;
+}
+
+.ipintel-badge-card.off .ipintel-badge-preview{
+  opacity:0.55;
+  border-color:rgba(120,150,170,0.25);
+}
+
+/* ---------- DARK ---------- */
+
+.ipintel-badge-card.dark{
+  background:#05080d;
+  color:#bfefff;
+  border:1px solid rgba(0,255,255,0.22);
+  box-shadow:0 0 14px rgba(0,255,255,0.06);
+}
+
+/* ---------- LIGHT ---------- */
+
+.ipintel-badge-card.light{
+  background:#f6fbff;
+  color:#063247;
+  border:1px solid rgba(0,180,210,0.22);
+  box-shadow:0 0 14px rgba(0,180,210,0.06);
+}
+
+/* ---------- preview pill ---------- */
+
+.ipintel-badge-preview{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:6px 12px 6px 8px;
+  border-radius:999px;
+  border:1px solid rgba(0,255,255,0.25);
+  margin-bottom:15px;
+    margin-top:20px;
+    line-height:1;
+}
+
+.ipintel-badge-card.light .ipintel-badge-preview{
+  border-color:rgba(0,180,210,0.25);
+}
+
+/* ---------- text ---------- */
+
+.ipintel-badge-title{
+  font-size:12px;
+  opacity:0.95;
+
+}
+
+.ipintel-badge-sub{
+  font-size:12px;
+  opacity:0.65;
+  margin-top:4px;
+  margin-bottom:10px;
+}
+
+/* ---------- hover ---------- */
+
+.ipintel-badge-choice:hover .ipintel-badge-card{
+  transform:translateY(-2px);
+  box-shadow:0 0 28px rgba(0,255,255,0.18);
+  border-color:rgba(0,255,255,0.55);
+}
+
+/* ---------- checked ---------- */
+
+.ipintel-badge-choice input:checked + .ipintel-badge-card{
+  outline:2px solid rgba(0,255,255,0.85);
+  box-shadow:
+    0 0 32px rgba(0,255,255,0.22),
+    inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+/* ---------- marketing nudge ---------- */
+
+.ipintel-badge-card.dark::after,
+.ipintel-badge-card.light::after{
+  content:"Recommended";
+  position:absolute;
+  top:7px;
+  right:10px;
+  font-size:10px;
+  letter-spacing:.08em;
+  opacity:.55;
+
+}
+
+
+
+.ipintel-video-cta {
+    position:absolute;
+    bottom:12px;
+    right:12px;
+    background:rgba(0,0,0,.6);
+    padding:6px 10px;
+    border-radius:6px;
+    font-size:12px;
+}
+.ipintel-video-cta a {
+    color:#00e5ff;
+    text-decoration:none;
+}
+
+

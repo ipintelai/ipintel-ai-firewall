@@ -1,0 +1,291 @@
+/* Dark theme – IPIntel block & challenge page */
+
+/* -------------------------------------------------------
+   ROOT VARIABLES
+------------------------------------------------------- */
+:root {
+    --bg-page: #05080d;
+    --bg-card: #08101a;
+    --border-card: #143044;
+    --text-main: #e5f8ff;
+    --text-muted: #9ab3c6;
+    --accent: #26e7ff;
+    --accent-soft: rgba(38, 231, 255, 0.18);
+}
+
+/* -------------------------------------------------------
+   GLOBAL RESET
+------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+/* Prevent WordPress themes from overriding buttons */
+button,
+.ipintel-btn {
+    all: unset;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Prevent WP themes from altering label/input inside checkbox */
+label.checkwrap,
+.checkmark,
+.labeltext {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* -------------------------------------------------------
+   BACKGROUND
+------------------------------------------------------- */
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #071727 0, #05080d 35%, #020408 100%);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* -------------------------------------------------------
+   LAYOUT
+------------------------------------------------------- */
+
+.ipintel-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.ipintel-card {
+    max-width: 560px;
+    width: 100%;
+    background: var(--bg-card);
+    border-radius: 18px;
+    border: 1px solid var(--border-card);
+    box-shadow: 0 22px 55px rgba(0,0,0,0.8);
+    padding: 34px 34px 40px;
+}
+
+/* -------------------------------------------------------
+   BRAND HEADER
+------------------------------------------------------- */
+
+.ipintel-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.brand-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #050b12;
+    border: 1px solid rgba(38,231,255,0.35);
+    box-shadow: 0 0 18px rgba(38,231,255,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-logo-fallback {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo-fallback span {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--accent);
+}
+
+.brand-meta {
+    margin-left: 12px;
+}
+
+.brand-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.brand-subtitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--text-muted);
+}
+
+/* -------------------------------------------------------
+   TEXT
+------------------------------------------------------- */
+
+.block-title {
+    margin: 10px 0 8px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.block-text {
+    margin: 4px 0 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.block-text.secondary {
+    color: var(--text-muted);
+    margin-top: 12px;
+}
+
+/* -------------------------------------------------------
+   CHECKBOX
+------------------------------------------------------- */
+
+.checkwrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 26px 0 18px;
+}
+
+.checkwrap input {
+    display: none;
+}
+
+.checkmark {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    background: #050b12;
+    margin-right: 10px;
+    position: relative;
+    box-shadow: 0 0 12px rgba(38,231,255,0.25);
+    transition: 0.2s ease;
+}
+
+.checkwrap input:checked + .checkmark {
+    background: var(--accent);
+    box-shadow: 0 0 22px rgba(38,231,255,0.45);
+}
+
+.checkwrap input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    background: #000;
+}
+
+.labeltext {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+/* -------------------------------------------------------
+   BUTTON
+------------------------------------------------------- */
+
+.ipintel-btn {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    text-align: center;
+
+    background: rgba(38,231,255,0.12);
+    border: 1px solid rgba(38,231,255,0.35);
+    color: var(--accent);
+
+    opacity: .55;
+    cursor: not-allowed;
+    transition: 0.25s ease;
+    margin-top:10px;
+}
+
+/* Active */
+.ipintel-btn.enabled {
+    opacity: 1;
+    cursor: pointer;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+    box-shadow: 0 0 22px rgba(38,231,255,0.45);
+}
+
+.ipintel-btn.enabled:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 30px rgba(38,231,255,0.65);
+}
+
+/* -------------------------------------------------------
+   FOOTER
+------------------------------------------------------- */
+
+.ipintel-footer {
+    margin-top: 40px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(15,40,60,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.ipintel-mini {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.ipintel-mini img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ipintel-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.ipintel-footer a:hover {
+    text-decoration: underline;
+}
+

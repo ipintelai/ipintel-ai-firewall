@@ -1,0 +1,181 @@
+/* Light theme – IPIntel block page */
+
+:root {
+    --bg-page: #f3f6fb;
+    --bg-card: #ffffff;
+    --border-card: #d8e2f0;
+    --text-main: #1b2736;
+    --text-muted: #70839a;
+    --accent: #0087ff;
+    --accent-soft: rgba(0,135,255,0.18);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #e4f0ff 0, #f3f6fb 35%, #e8eef8 100%);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ipintel-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.ipintel-card {
+    max-width: 560px;
+    width: 100%;
+    background: var(--bg-card);
+    border-radius: 18px;
+    border: 1px solid var(--border-card);
+    box-shadow: 0 22px 55px rgba(15,44,80,0.16);
+    padding: 26px 28px 24px;
+}
+
+/* Brand header */
+
+.ipintel-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.brand-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #f0f4fb;
+    border: 1px solid rgba(0,135,255,0.35);
+    box-shadow: 0 0 16px rgba(0,135,255,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-logo-fallback span {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--accent);
+}
+
+.brand-meta {
+    margin-left: 12px;
+}
+
+.brand-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.brand-subtitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--text-muted);
+}
+
+/* Main text */
+
+.block-title {
+    margin: 8px 0 8px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.block-text {
+    margin: 4px 0 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.block-text.secondary {
+    color: var(--text-muted);
+    margin-top: 12px;
+}
+
+/* IP strip */
+
+.ip-strip {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #f5f8ff;
+    border: 1px solid rgba(0,135,255,0.35);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--accent);
+    box-shadow: 0 0 16px var(--accent-soft);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ip-label {
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+.ip-value {
+    font-weight: 600;
+}
+
+/* Footer */
+
+.ipintel-footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #e1e7f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.ipintel-mini {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.ipintel-mini img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ipintel-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.ipintel-footer a:hover {
+    text-decoration: underline;
+}
+
+

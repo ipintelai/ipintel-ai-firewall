@@ -1,0 +1,293 @@
+/* Light theme – IPIntel block & challenge page */
+
+/* -------------------------------------------------------
+   ROOT VARIABLES
+------------------------------------------------------- */
+:root {
+    --bg-page: #f3f6fb;
+    --bg-card: #ffffff;
+    --border-card: #d8e2f0;
+    --text-main: #1b2736;
+    --text-muted: #70839a;
+    --accent: #0087ff;
+    --accent-soft: rgba(0,135,255,0.18);
+}
+
+/* -------------------------------------------------------
+   GLOBAL RESET
+------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+/* Prevent WordPress themes from overriding buttons */
+button,
+.ipintel-btn {
+    all: unset;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Prevent WP themes from styling labels, inputs, etc. */
+label.checkwrap,
+.checkmark,
+.labeltext {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* -------------------------------------------------------
+   BODY BACKGROUND
+------------------------------------------------------- */
+
+body {
+    background: radial-gradient(circle at top, #e4f0ff 0, #f3f6fb 35%, #e8eef8 100%);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* -------------------------------------------------------
+   LAYOUT
+------------------------------------------------------- */
+
+.ipintel-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.ipintel-card {
+    max-width: 560px;
+    width: 100%;
+    background: var(--bg-card);
+    border-radius: 18px;
+    border: 1px solid var(--border-card);
+    box-shadow: 0 22px 55px rgba(15,44,80,0.16);
+    padding: 34px 34px 40px;
+}
+
+/* -------------------------------------------------------
+   BRAND HEADER
+------------------------------------------------------- */
+
+.ipintel-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.brand-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #f0f4fb;
+    border: 1px solid rgba(0,135,255,0.35);
+    box-shadow: 0 0 16px rgba(0,135,255,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-logo-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+}
+
+.brand-logo-fallback span {
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.brand-meta {
+    margin-left: 12px;
+}
+
+.brand-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.brand-subtitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--text-muted);
+}
+
+/* -------------------------------------------------------
+   TEXT ELEMENTS
+------------------------------------------------------- */
+
+.block-title {
+    margin: 10px 0 8px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.block-text {
+    margin: 4px 0 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.block-text.secondary {
+    color: var(--text-muted);
+    margin-top: 12px;
+}
+
+/* -------------------------------------------------------
+   CHECKBOX AREA
+------------------------------------------------------- */
+
+/* Full wrapper */
+.checkwrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 26px 0 18px;
+}
+
+/* Actual checkbox square */
+.checkmark {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    background: #f9fbff;
+    margin-right: 10px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,135,255,0.18);
+    transition: 0.2s ease;
+}
+
+.checkwrap input {
+    display: none;
+}
+
+.checkwrap input:checked + .checkmark {
+    background: var(--accent);
+    box-shadow: 0 0 20px rgba(0,135,255,0.35);
+}
+
+.checkwrap input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    background: white;
+}
+
+.labeltext {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+/* -------------------------------------------------------
+   BUTTON
+------------------------------------------------------- */
+
+.ipintel-btn {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    text-align: center;
+    margin-top:10px;
+    background: rgba(0,135,255,0.12);
+    border: 1px solid rgba(0,135,255,0.35);
+    color: var(--accent);
+
+    opacity: .55;
+    cursor: not-allowed;
+    transition: 0.25s ease;
+}
+
+/* When JS enables it */
+.ipintel-btn.enabled {
+    opacity: 1;
+    cursor: pointer;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    box-shadow: 0 0 18px rgba(0,135,255,0.35);
+}
+
+.ipintel-btn.enabled:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 26px rgba(0,135,255,0.55);
+}
+
+/* -------------------------------------------------------
+   FOOTER
+------------------------------------------------------- */
+
+
+
+.ipintel-footer {
+    margin-top: 40px;
+    padding-top: 14px;
+    border-top: 1px solid #e1e7f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.ipintel-mini {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.ipintel-mini img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ipintel-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.ipintel-footer a:hover {
+    text-decoration: underline;
+}
+
