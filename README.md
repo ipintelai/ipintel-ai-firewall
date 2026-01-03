@@ -17,6 +17,7 @@ This repository contains the WordPress plugin source code.
 1. Upload the `ipintel-ai-firewall` folder to `/wp-content/plugins/`
 2. Activate the plugin from the WordPress admin panel
 3. Configure your API key in **Settings → IPIntel Firewall**
+   (to get API key, sign-up to https://ipintel.ai)
 
 ## Requirements
 
