@@ -2,6 +2,7 @@
 
 IPIntel AI Firewall is a WordPress security plugin that helps block bots,
 scanners, and malicious traffic before they reach your site.
+Helps to stop fake traffic, bot noise, polluted analytics.
 
 This repository contains the WordPress plugin source code.
 
